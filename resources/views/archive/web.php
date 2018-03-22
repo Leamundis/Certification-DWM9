@@ -11,9 +11,10 @@
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
 Auth::routes();
 
-Route::get('/', 'NavController@home');
-Route::get('/album', 'NavController@album');
-Route::get('/shirt', 'NavController@shirt');
-Route::get('/instrument', 'NavController@instrument');
+Route::get('/home', 'HomeController@index')->name('home');
