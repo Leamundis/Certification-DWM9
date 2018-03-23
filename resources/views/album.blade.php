@@ -1,5 +1,12 @@
 @extends('layouts.base')
+@section('title', 'Album')
 @section('content')
+<nav>
+    <ul>
+            <li><a href="/genre">Genres</a></li>
+            <li><a href="/artist">Artistes</a></li>
+    </ul>
+</nav>
 @if(Session::has('success'))
         <div>{{ session('success') }}</div>
 @endif
@@ -10,9 +17,10 @@
 </div>
 <table>
     <tr>
-        <th>Nom</th>
-        <th>Description</th>
-        <th>Taille</th>
+        <th>Titre</th>
+        <th>Artiste</th>
+        <th>Année de sortie</th>
+        <th>Genres</th>
         <th>Prix</th>
         <th>Stock</th>
         <th>Mettre à jour</th>
@@ -22,29 +30,34 @@
     @foreach ($albums as $album)
         <tr>
             <td> {{ $album['name'] }} </td>
-            <td> {{ $album['description'] }} </td>
-            <td> {{ $album['size'] }} </td>
+            <td> {{ $album->artist['name'] }} </td>
+            <td> {{ $album['year'] }} </td>
+            <td>
+                @foreach ($album->genres as $genre)
+                    {{ $genre->name }}
+                @endforeach
+            </td>            
             <td> {{ $album['price'] }} </td>
             <td> {{ $album['stock'] }} </td>
             <td>                    
-                {{ Form::open(['url' => '/updatealbum']) }}
+                {{ Form::open(['url' => '/updateAlbum']) }}
                     {{ Form::hidden('id', $album['id']) }}
                     {{ Form::submit('U') }}
                 {{ Form::close() }}
             </td>
             <td>
-                {{ Form::open(['url' => '/deletealbum']) }}
+                {{ Form::open(['url' => '/deleteAlbum']) }}
                     {{ Form::hidden('id', $album->id) }}
                     {{ Form::submit('X') }}
                 {{ Form::close() }}
             </td>
             <td>
-                {{ Form::open(['url' => '/plusOnalbum']) }}
+                {{ Form::open(['url' => '/plusOneAlbum']) }}
                     {{ Form::hidden('id', $album->id) }}
                     {{ Form::submit('+') }}
                 {{ Form::close() }}
                 @if ($album['stock'] > 0)
-                    {{ Form::open(['url' => '/minusOnalbum']) }}
+                    {{ Form::open(['url' => '/minusOneAlbum']) }}
                         {{ Form::hidden('id', $album->id) }}
                         {{ Form::submit('-') }}
                     {{ Form::close() }} 
@@ -54,8 +67,8 @@
     @endforeach
 </table>
 <div>
-    <a href="/insertalbum">
-    <input type="button" value="Ajouter un T-album">
+    <a href="/insertAlbum">
+    <input type="button" value="Ajouter un Album">
     </a>
 </div>
 @stop

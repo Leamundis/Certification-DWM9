@@ -1,4 +1,5 @@
 @extends('layouts.base')
+@section('title', 'T-shirt')
 @section('content')
 @if(Session::has('success'))
         <div>{{ session('success') }}</div>
@@ -39,12 +40,12 @@
                 {{ Form::close() }}
             </td>
             <td>
-                {{ Form::open(['url' => '/plusOnShirt']) }}
+                {{ Form::open(['url' => '/plusOneShirt']) }}
                     {{ Form::hidden('id', $shirt->id) }}
                     {{ Form::submit('+') }}
                 {{ Form::close() }}
                 @if ($shirt['stock'] > 0)
-                    {{ Form::open(['url' => '/minusOnShirt']) }}
+                    {{ Form::open(['url' => '/minusOneShirt']) }}
                         {{ Form::hidden('id', $shirt->id) }}
                         {{ Form::submit('-') }}
                     {{ Form::close() }} 

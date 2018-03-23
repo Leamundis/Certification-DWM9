@@ -1,4 +1,5 @@
 @extends('layouts.base')
+@section('title', 'T-shirt')
 @section('content')
 <h1>Mettre à jour le T-shirt</h1>
 {{ Form::open(['url' => '/updateOneShirt']) }}

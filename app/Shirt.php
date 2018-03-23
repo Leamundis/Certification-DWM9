@@ -65,6 +65,4 @@ class Shirt extends Model
         $shirt->save();
         return $shirt;
     }
-
-
 }

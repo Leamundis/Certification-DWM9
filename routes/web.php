@@ -26,14 +26,22 @@ Route::post('/insertShirt', 'ActionController@insertShirt');
 Route::post('/updateShirt', 'NavController@updateShirt');
 Route::post('/updateOneShirt', 'ActionController@updateOneShirt');
 Route::post('/deleteShirt', 'ActionController@deleteOneShirt');
-Route::post('/plusOnShirt', 'ActionController@plusOneShirt');
-Route::post('/minusOnShirt', 'ActionController@minusOneShirt');
+Route::post('/plusOneShirt', 'ActionController@plusOneShirt');
+Route::post('/minusOneShirt', 'ActionController@minusOneShirt');
 
+// Album Route
+Route::get('/insertAlbum', 'NavController@insertAlbum');
+Route::post('/insertAlbum', 'ActionController@insertAlbum');
+Route::post('/updateAlbum', 'NavController@updateAlbum');
+Route::post('/updateOneAlbum', 'ActionController@updateOneAlbum');
+Route::post('/deleteAlbum', 'ActionController@deleteOneAlbum');
+Route::post('/plusOneAlbum', 'ActionController@plusOneAlbum');
+Route::post('/minusOneAlbum', 'ActionController@minusOneAlbum');
 
+// Artist Route
+Route::get('/artist', 'NavController@artist');
+Route::post('/insertArtist', 'ActionController@insertArtist');
 
-
-// Instrument Route
-Route::get('/insertInstrument', 'NavController@insertInstrument');
-Route::post('/insertInstrument', 'ActionController@insertInstrument');
-Route::post('/updateInstrument', 'NavController@updateInstrument');
-Route::post('/updateOneInstrument', 'ActionController@updateOneInstrument');
+// Genre Route
+Route::get('/genre', 'NavController@genre');
+Route::post('/insertGenre', 'ActionController@insertGenre');
