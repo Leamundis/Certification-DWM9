@@ -17,6 +17,9 @@ class CreateShirtsTable extends Migration
             $table->increments('id');
             $table->text('name');
             $table->text('description');
+            $table->text('size');
+            $table->integer('stock');
+            $table->integer('price');
             $table->timestamps();
         });
     }
