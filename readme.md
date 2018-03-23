@@ -1,59 +1,31 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+******************************
+**********  README  **********
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+**********  BY JON  **********
+******************************
 
-## About Laravel
+# Le site
+Le site est censé représenter celui d'une boutique de musique, qui vend Albums et T-shirt, et qui souhaiterai gérer ses stocks.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+# Ce qu'il fait
+Il permet de gérer les stocks (CRUD) des T-shirts (taille, prix, et description stock) et des Albums. A côté de ça, on ne peut que ajouter des Artistes et Genres de musique (les deux liés aux albums), vu que ce sont des données qu'on garde.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# Ce que je voulais faire
+Beaucoup de choses, mais dans les trucs principaux, je voulais aussi faire de la vente d'instrument de musique, et permettre de gérer les stocks des T-shirts suivant leur taille, sans avoir à créer un nouvel objet "t-shirt" à chaque fois, mais je me suis perdu dans les tables (et non pas l'étable).
+J'aurai voulu ajouter la gestion de l'authentification, mais ça aussi, pas assez de temps.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
 
-## Learning Laravel
+# Ce que j'ai utilisé
+J'ai monter toute la VM et le laravel sans script ni note, mais en m'aidant des docs.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+# Mes gros soucis
+Surtout la première table que je n'ai pas réussi à faire par rapport aux t-shirts, qui m'a fait perdre vraiment pas mal de temps.
+Quelques soucis pour retrouver les bonnes syntaxes pour les tableaux intermédiaires (passer les bonnes variables, les récuprer, etc).
+J'ai oublié mon inspiration chez moi, du coup, un peu galère sur le CSS, pour changer.
+De plus, malheureusement, trop galéré sur trop de chose, le responsive est pas au rendez-vous.
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Pulse Storm](http://www.pulsestorm.net/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Ce dont je suis fier et les points spécifiques
+Mes petits boutons + et - pour gérer rapidement un petit changement de stock.
+Le fait que les stocks et le prix doivent être positif.
+D'avoir réussi à refaire les Routes et fonctions directement dans les models.

@@ -1,0 +1,105 @@
+.kaiser {
+    background-image: url("./img/kaiser.png");
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 1420px;
+    height: 600px;
+    bottom: -27%;
+    left: 26%;
+}
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+html {
+    height: 100%;
+    body {
+        background-image: url('./img/music.jpg');
+        background-size: cover;
+        padding: 0;
+        margin: 0;
+        margin-top: 15px;
+        .flexCenter;
+        flex-direction: column;
+        header {
+            flex-direction: column;
+            .flexCenter;
+            nav {
+                width: 100%;
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    :hover {
+                        background-color: #886132;
+                        color: rgb(164, 189, 118);
+                    }
+                    li {
+
+                        list-style: none;
+                        a {
+                            text-decoration: none;
+                            border-radius: 20px;
+                            padding: 18px;
+                            border: #886132 2px solid;
+                        } 
+                    }
+                }
+            }
+            .nav2 {
+                margin-top: 40px;
+            }
+        }      
+        main {
+            .flexCenter;
+            flex-direction: column;
+            .flash {
+                .flexCenter;
+            }
+            h1 {
+                margin-top: 50px;
+                .flexCenter;
+            }
+            p {
+                .flexCenter;
+            }
+            .core {
+                table {
+                    .flexCenter;
+                    tr:nth-child(even) {
+                        background-color: rgba(211, 211, 211, 0.836);
+                    }
+                    tr:nth-child(odd) {
+                        background-color: rgba(169, 169, 169, 0.7);
+                    }
+                    tr:first-child {
+                        background-color: none;
+                    }
+                    tr:last-child {
+                        background-color: none;
+                    }
+                    td:last-child {
+                        display: flex;
+                        justify-content: space-evenly;
+                    }
+                }
+            }
+            >div {
+                >div {
+                    justify-content: space-evenly;
+                    display: flex;
+                }
+            }
+            .form {
+                .flexCenter
+            }
+        }
+    }
+}
+
