@@ -8,7 +8,7 @@
     <title>@yield('title')</title>
 </head>
 <body>
-    
+
     <header>
         <nav>
             <ul>
@@ -23,6 +23,7 @@
         @yield('kaiser')
         @yield('content')
     </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js" ></script>
     <script src="./js/script.js" ></script>
 </body>

@@ -10,7 +10,7 @@ function onKonamiCode(cb) {
       input = ("" + e.keyCode);
     });
   }
-  
+
 onKonamiCode(function () {
     $("#kaiser").removeClass("hidden");
 })
